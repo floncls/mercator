@@ -26,7 +26,7 @@
                             {{ trans('cruds.entity.fields.name') }}
                         </th>
                         <th>
-                            {{ trans('cruds.entity.fields.description') }}
+                            {{ trans('cruds.entity.fields.entity_type') }}
                         </th>
                         <th>
                             {{ trans('cruds.entity.fields.is_external') }}
@@ -35,10 +35,7 @@
                             {{ trans('cruds.entity.fields.contact_point') }}
                         </th>
                         <th>
-                            {{ trans('cruds.entity.fields.security_level') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.entity.fields.exploits') }}
+                            {{ trans('cruds.entity.fields.relations') }}
                         </th>
                         <th>
                             &nbsp;
@@ -66,33 +63,17 @@
                                 </a>
                             </td>
                             <td>
-                                {!! $entity->description ?? '' !!}
+                                {{ $entity->entity_type }}
                             </td>
                             <td>
                                 {!!  $entity->is_external  == null ? '' : trans('global.'.($entity->is_external ? 'yes' : 'no'))  !!}
-                            </td>  
-                            <td>
-                                {!! $entity->contact_point  ?? '' !!}
-                            </td>                        
-                            <td>
-                                {!! $entity->security_level ?? '' !!}
                             </td>
                             <td>
-                                @foreach($entity->applications as $application)
-                                    <a href="{{ route('admin.applications.show', $application->id) }}">
-                                        {{ $application->name }}
-                                    </a>
-                                    @if (!$loop->last)
-                                    ,
-                                    @endif
-                                @endforeach
-                                @if(($entity->applications->count()>0)&&($entity->databases->count()>0))
-                                    ,<br>
-                                @endif
-                                @foreach($entity->databases as $database)
-                                    <a href="{{ route('admin.databases.show', $database->id) }}">
-                                        {{ $database->name }}
-                                    </a>
+                                {!! $entity->contact_point  ?? '' !!}
+                            </td>
+                            <td>
+                                @foreach ($entity->destinationRelations as $relation)
+                                    <a href="/admin/relations/{{ $relation->id }}">{{ $relation->name }}</a>
                                     @if (!$loop->last)
                                     ,
                                     @endif

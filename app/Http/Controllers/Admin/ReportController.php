@@ -348,7 +348,7 @@ class ReportController extends Controller
                 });
 
             // TODO : improve me
-            $tasks = Task::All()->sortBy('nom')
+            $tasks = Task::All()->sortBy('name')
                 ->filter(function ($item) use ($operations) {
                     foreach ($operations as $operation) {
                         foreach ($operation->tasks as $task) {
@@ -583,30 +583,42 @@ class ReportController extends Controller
             }
         }
 
+        // Databases
+        if ($request->databases === null) {
+            $request->session()->put('databases', []);
+            $databases = [];
+        } else {
+            if ($request->databases !== null) {
+                $databases = $request->databases;
+                $request->session()->put('databases', $databases);
+            } else {
+                $databases = $request->session()->get('databases');
+            }
+        }
+
         // Get assets
         $application_ids = DB::table('m_applications')
             ->whereIn('application_block_id', $applicationBlocks)
+            ->whereNull('deleted_at')
             ->orWhereIn('id', $applications)
             ->pluck('id');
 
         $applicationservice_ids = DB::table('m_applications')
             ->join('application_service_m_application', 'm_applications.id', '=', 'application_service_m_application.m_application_id')
             ->whereIn('application_block_id', $applicationBlocks)
+            ->whereNull('deleted_at')
             ->pluck('application_service_id')
             ->unique();
 
         $applicationmodule_ids = DB::table('m_applications')
             ->join('application_service_m_application', 'm_applications.id', '=', 'application_service_m_application.m_application_id')
             ->join('application_module_application_service', 'application_service_m_application.application_service_id', '=', 'application_module_application_service.application_service_id')
+            ->whereNull('deleted_at')
             ->whereIn('application_block_id', $applicationBlocks)
             ->pluck('application_module_id')
             ->unique();
 
-        $database_ids = DB::table('m_applications')
-            ->join('database_m_application', 'm_applications.id', '=', 'database_m_application.m_application_id')
-            ->whereIn('application_block_id', $applicationBlocks)
-            ->pluck('database_id')
-            ->unique();
+        $database_ids = collect($databases);
 
         // get all flows
         $flows = Flux::All()->sortBy('name');
@@ -634,51 +646,50 @@ class ReportController extends Controller
             });
 
         // filter linked objects
-        $application_ids = []; //$application_ids->toArray();
-        $service_ids = [];
-        $module_ids = [];
-        $database_ids = [];
+        $application_ids = collect();
+        $service_ids = collect();
+        $module_ids = collect();
 
         // loop on flows
         foreach ($flows as $flux) {
             // applications
             if (($flux->application_source_id !== null) &&
-               (! in_array($flux->application_source_id, $application_ids))) {
-                array_push($application_ids, $flux->application_source_id);
+               (! $application_ids->contains($flux->application_source_id))) {
+                $application_ids->push($flux->application_source_id);
             }
             if (($flux->application_dest_id !== null) &&
-               (! in_array($flux->application_dest_id, $application_ids))) {
-                array_push($application_ids, $flux->application_dest_id);
+               (! $application_ids->contains($flux->application_dest_id))) {
+                $application_ids->push($flux->application_dest_id);
             }
 
             // services
             if (($flux->service_source_id !== null) &&
-               (! in_array($flux->service_source_id, $service_ids))) {
-                array_push($service_ids, $flux->service_source_id);
+               (! $service_ids->contains($flux->service_source_id))) {
+                $service_ids->push($flux->service_source_id);
             }
             if (($flux->service_dest_id !== null) &&
-               (! in_array($flux->service_dest_id, $service_ids))) {
-                array_push($service_ids, $flux->service_dest_id);
+               (! $service_ids->contains($flux->service_dest_id))) {
+                $service_ids->push($flux->service_dest_id);
             }
 
             // modules
             if (($flux->module_source_id !== null) &&
-               (! in_array($flux->module_source_id, $module_ids))) {
-                array_push($module_ids, $flux->module_source_id);
+               (! $module_ids->contains($flux->module_source_id))) {
+                $module_ids->push($flux->module_source_id);
             }
             if (($flux->module_dest_id !== null) &&
-               (! in_array($flux->module_dest_id, $module_ids))) {
-                array_push($module_ids, $flux->module_dest_id);
+               (! $module_ids->contains($flux->module_dest_id))) {
+                $module_ids->push($flux->module_dest_id);
             }
 
             // databases
             if (($flux->database_source_id !== null) &&
-               (! in_array($flux->database_source_id, $database_ids))) {
-                array_push($database_ids, $flux->database_source_id);
+               (!$database_ids->contains($flux->database_source_id))) {
+                $database_ids->push($flux->database_source_id);
             }
             if (($flux->database_dest_id !== null) &&
-               (! in_array($flux->database_dest_id, $database_ids))) {
-                array_push($database_ids, $flux->database_dest_id);
+               (! $database_ids->contains($flux->database_dest_id))) {
+                $database_ids->push($flux->database_dest_id);
             }
         }
 
@@ -699,17 +710,13 @@ class ReportController extends Controller
         // update lists
         $all_applicationBlocks = ApplicationBlock::All()->sortBy('name')->pluck('name', 'id');
         $all_applications = MApplication::All()->sortBy('name')->pluck('name', 'id');
-        // $all_applicationServices = ApplicationService::All()->sortBy("name")->pluck("name","id");
-        // $all_applicationModules = ApplicationModule::All()->sortBy("name")->pluck("name","id");
-        // $all_databases = Database::All()->sortBy("name")->pluck("name","id");
+        $all_databases = Database::All()->sortBy('name')->pluck('name', 'id');
 
         // return
         return view('admin/reports/application_flows')
             ->with('all_applicationBlocks', $all_applicationBlocks)
             ->with('all_applications', $all_applications)
-            // ->with("all_applicationModules",$all_applicationModules)
-            // ->with("all_applicationServices",$all_applicationServices)
-            // ->with("all_databases",$all_databases)
+            ->with('all_databases', $all_databases)
             ->with('applications', $applications)
             ->with('applicationServices', $applicationServices)
             ->with('applicationModules', $applicationModules)
