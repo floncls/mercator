@@ -5,11 +5,9 @@
         {{ trans('global.back_to_list') }}
     </a>
 
-    <!-- TOOD
-    <a class="btn btn-success" href="{{ route('admin.report.explore') }}?node={{$logicalFlow->source_id()}},{{$logicalFlow->dest_id()}}">
+    <a class="btn btn-success" href="{{ route('admin.report.explore') }}?flow={{$logicalFlow->id}}">
         {{ trans('global.explore') }}
     </a>
-    -->
 
     @can('lan_edit')
     <a class="btn btn-info" href="{{ route('admin.logical-flows.edit', $logicalFlow->id) }}">

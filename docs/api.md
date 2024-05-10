@@ -69,8 +69,11 @@ _Logical infrastructure view_
 - /api/security-devices
 - /api/dhcp-servers
 - /api/dnsservers
+- /api/clusters
 - /api/logical-servers
+- /api/logical-flows
 - /api/certificates
+- /api/vlans
 
 _Physical infrastructure view_
 
@@ -89,7 +92,6 @@ _Physical infrastructure view_
 - /api/wans
 - /api/mans
 - /api/lans
-- /api/vlans
 
 _Administration_
 
