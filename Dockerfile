@@ -60,8 +60,6 @@ RUN composer -n update
 # Publish Laravel Vendor resources
 RUN php artisan vendor:publish --all
 
-
-
 # Create database folder
 RUN mkdir sql
 
