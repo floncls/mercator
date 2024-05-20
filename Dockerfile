@@ -41,7 +41,7 @@ RUN addgroup --g 1000 -S www && \
 
 # Clone sources from Github
 WORKDIR /var/www/
-RUN git clone https://github.com/dbarzin/mercator.git/
+RUN git clone https://github.com/floncls/mercator
 WORKDIR /var/www/mercator
 
 # Copy config files

@@ -25,6 +25,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-06-10 15:20:42',
                 'updated_at' => '2020-06-10 15:20:42',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             1 =>
             array(
