@@ -20,6 +20,7 @@ class CreateActivitiesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->unique(['name', 'deleted_at'], 'activities_name_unique');
+            $table->string('maturity')->nullable();
         });
     }
 
