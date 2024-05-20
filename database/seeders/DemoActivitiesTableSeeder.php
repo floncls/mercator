@@ -22,7 +22,6 @@ class DemoActivitiesTableSeeder extends Seeder
                 'id' => 1,
                 'name' => 'Activité 1',
                 'description' => '<p>Description de l\'activité 1</p>',
-                'maturity' => NULL,
                 'created_at' => '2020-06-10 15:20:42',
                 'updated_at' => '2020-06-10 15:20:42',
                 'deleted_at' => NULL,

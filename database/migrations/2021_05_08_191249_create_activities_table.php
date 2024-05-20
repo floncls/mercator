@@ -17,7 +17,6 @@ class CreateActivitiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->string('maturity')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->unique(['name', 'deleted_at'], 'activities_name_unique');
