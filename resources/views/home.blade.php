@@ -8,8 +8,46 @@
                     {!! trans("panel.maturity_levels") !!}
                 </div>
                 <div class="card-body">
+                    <div style="width: 1050px; height: 500px;">
+                        <?php
+                            $command = escapeshellcmd('python3 /var/www/mercator/resources/python/cmmi.py');
+                            $output = shell_exec($command);
+                            echo $output;
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    {!! trans("panel.maturity_levels") !!}
+                </div>
+                <div class="card-body">
                     <table>
-                        <p>hello</p>
+                        <tr>
+                            <td align="center">
+                              <a href="/admin/report/maturity1">
+                                <div style="width: 350px; height: 180px;">
+                                  <canvas id="gauge_chart1_div"></canvas>
+                                </div>
+                                {!! trans("panel.level_1.title_short") !!}
+                              </a>
+                            </td>
+                            <td align="center">
+                              <a href="/admin/report/maturity2">
+                                <div style="width: 350px; height: 180px;">
+                                  <canvas id="gauge_chart2_div"></canvas>
+                                </div>
+                                {!! trans("panel.level_2.title_short") !!}
+                              </a>
+                            <td align="center">
+                              <a href="/admin/report/maturity3">
+                                <div style="width: 350px; height: 180px;">
+                                  <canvas id="gauge_chart3_div"></canvas>
+                                </div>
+                                {!! trans("panel.level_3.title_short") !!}
+                              </a>
+                            </td>
+                        </tr>
                     </table>
                 </div>
               </div>

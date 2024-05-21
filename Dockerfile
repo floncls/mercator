@@ -1,7 +1,7 @@
 FROM php:8.3-fpm-alpine3.19
 
 # system deps
-RUN apk update && apk add git curl nano bash ssmtp graphviz fontconfig ttf-freefont ca-certificates sqlite sqlite-dev nginx gettext supervisor
+RUN apk update && apk add git curl python3 nano bash ssmtp graphviz fontconfig ttf-freefont ca-certificates sqlite sqlite-dev nginx gettext supervisor
 
 # run font cache
 RUN fc-cache -f
@@ -27,6 +27,12 @@ RUN apk add php-zip \
   libpng \
   libpng-dev
 
+# Create a virtual environment
+RUN python3 -m venv /venv
+
+# Set the virtual environment as the active environment
+ENV PATH="/venv/bin:$PATH"
+
 # Install PHP extensions
 RUN docker-php-ext-install gd zip ldap pdo pdo_mysql
 
@@ -41,12 +47,20 @@ RUN addgroup --g 1000 -S www && \
 
 # Clone sources from Github
 WORKDIR /var/www/
-RUN git clone https://github.com/floncls/mercator
+#RUN git clone https://github.com/floncls/mercator
+COPY . /var/www/mercator
 WORKDIR /var/www/mercator
+
+# Install Python dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy config files
 RUN cp docker/nginx.conf /etc/nginx/http.d/default.conf
 RUN cp docker/supervisord.conf /etc/supervisord.conf
+
+# Installing python dependancies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # change owner
 RUN chown -R mercator:www /var/www/mercator
