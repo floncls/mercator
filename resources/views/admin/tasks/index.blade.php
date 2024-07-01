@@ -32,6 +32,9 @@
                             {{ trans('cruds.task.fields.operations') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -59,6 +62,9 @@
                                     ,
                                     @endif
                                 @endforeach
+                            </td>
+                            <td>
+                                {!! $task->maturity !!}
                             </td>
                             <td>
                                 @can('task_show')

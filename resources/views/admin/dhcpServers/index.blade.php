@@ -30,7 +30,10 @@
                         </th>                        
                         <th>
                             {{ trans('cruds.dhcpServer.fields.address_ip') }}
-                        </th>                        
+                        </th>
+                        <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
                         <th>
                             &nbsp;
                         </th>
@@ -50,6 +53,9 @@
                             </td>                            
                             <td>
                                 {{ $dhcpServer->address_ip ?? '' }}
+                            </td>
+                            <td>
+                                {!! $dhcpServer->maturity !!}
                             </td>
                             <td>
                                 @can('dhcp_server_show')

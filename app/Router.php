@@ -35,6 +35,8 @@ class Router extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+
+        'maturity',
     ];
 
     protected function serializeDate(DateTimeInterface $date)

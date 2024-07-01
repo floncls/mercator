@@ -43,6 +43,9 @@
                             {{ trans('cruds.peripheral.fields.bay') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -74,6 +77,9 @@
                                 {{ $peripheral->site->name ?? '' }} -
                                 {{ $peripheral->building->name ?? '' }} -
                                 {{ $peripheral->bay->name ?? '' }}
+                            </td>
+                            <td>
+                                {!! $peripheral->maturity !!}
                             </td>
                             <td>
                                 @can('peripheral_show')

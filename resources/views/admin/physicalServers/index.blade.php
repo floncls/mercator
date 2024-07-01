@@ -41,6 +41,9 @@
                             {{ trans('cruds.physicalServer.fields.bay') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -94,6 +97,9 @@
                                     {{ $physicalServer->bay->name ?? '' }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $physicalServer->maturity !!}
                             </td>
                             <td>
                                 @can('physical_server_show')

@@ -35,6 +35,9 @@
                             {{ trans('cruds.network.fields.security_need') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -105,7 +108,10 @@
                                     <span> * </span>
                                 @endif                                    
 
-                            </td>                            
+                            </td>
+                            <td>
+                                {!! $network->maturity !!}
+                            </td>
                             <td>
                                 @can('network_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.networks.show', $network->id) }}">

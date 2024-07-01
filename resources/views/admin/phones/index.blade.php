@@ -35,6 +35,9 @@
                             {{ trans('cruds.phone.fields.building') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -56,6 +59,9 @@
                             </td>
                             <td>
                                 {{ $phone->building->name ?? '' }}
+                            </td>
+                            <td>
+                                {!! $phone->maturity !!}
                             </td>
                             <td>
                                 @can('phone_show')

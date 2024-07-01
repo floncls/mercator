@@ -145,6 +145,14 @@
                             @endif
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $process->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

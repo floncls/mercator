@@ -35,6 +35,9 @@
                             {{ trans('cruds.applicationBlock.fields.responsible') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -70,6 +73,9 @@
                             </td>
                             <td>
                                 {{ $applicationBlock->responsible ?? '' }}
+                            </td>
+                            <td>
+                                {!! $applicationBlock->maturity !!}
                             </td>
                             <td>
                                 @can('application_block_show')

@@ -29,6 +29,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-14 13:02:22',
                 'updated_at' => '2021-05-16 19:37:49',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             1 => 
             array (
@@ -40,6 +41,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-14 13:02:39',
                 'updated_at' => '2020-06-17 16:43:42',
                 'deleted_at' => '2020-06-17 16:43:42',
+                'maturity' => NULL,
             ),
             2 => 
             array (
@@ -51,6 +53,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-14 13:02:54',
                 'updated_at' => '2020-06-17 16:43:46',
                 'deleted_at' => '2020-06-17 16:43:46',
+                'maturity' => NULL,
             ),
             3 => 
             array (
@@ -62,6 +65,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-17 16:44:01',
                 'updated_at' => '2021-05-16 19:38:19',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             4 => 
             array (
@@ -73,6 +77,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-17 16:44:23',
                 'updated_at' => '2020-06-17 16:44:23',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             5 => 
             array (
@@ -84,6 +89,7 @@ class DemoActorsTableSeeder extends Seeder
                 'created_at' => '2020-06-17 16:44:50',
                 'updated_at' => '2020-06-17 16:44:50',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
         ));
         

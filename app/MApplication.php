@@ -57,6 +57,7 @@ class MApplication extends Model
         'install_date',
         'update_date',
         'next_update',
+        'maturity'
     ];
 
     /**

@@ -43,6 +43,14 @@
                         {{ $lan->description }}
                     </td>
                 </tr>
+                <tr>
+                    <th width="10%">
+                        {{ trans('cruds.maturity.maturity') }}
+                    </th>
+                    <td>
+                        {{ $lan->maturity }}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

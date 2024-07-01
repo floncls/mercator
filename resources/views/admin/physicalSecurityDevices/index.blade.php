@@ -38,6 +38,9 @@
                             {{ trans('cruds.physicalSecurityDevice.fields.bay') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -86,6 +89,9 @@
                                     {{ $physicalSecurityDevice->bay->name ?? '' }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $physicalSecurityDevice->maturity !!}
                             </td>
                             <td>
                                 @can('physical_security_device_show')

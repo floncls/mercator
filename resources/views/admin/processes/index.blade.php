@@ -43,6 +43,9 @@
                             {{ trans('cruds.process.fields.macroprocessus') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.process.fields.owner') }}
                         </th>
                         <th>
@@ -117,6 +120,9 @@
                                 {{ $process->macroProcess->name ?? '' }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $process->maturity !!}
                             </td>
                             <td>
                                 {{ $process->owner ?? '' }}

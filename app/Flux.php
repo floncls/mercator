@@ -44,6 +44,8 @@ class Flux extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+
+        'maturity',
     ];
 
     public function source_id(): ?string

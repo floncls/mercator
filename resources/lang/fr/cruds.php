@@ -1374,4 +1374,8 @@ return [
         'title_short' => 'Zones',
         'title_singular' => "Zone d'administration",
     ],
+    'maturity' => [
+        'maturity' => 'Maturité',
+        'maturity_helper' => 'Entrez un niveau de maturité',
+    ],
 ];

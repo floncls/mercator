@@ -35,6 +35,9 @@
                             {{ trans('cruds.actor.fields.type') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -65,6 +68,9 @@
                             </td>
                             <td>
                                 {{ $actor->type ?? '' }}
+                            </td>
+                            <td>
+                                {!! $actor->maturity !!}
                             </td>
                             <td>
                                 @can('actor_show')

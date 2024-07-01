@@ -41,6 +41,9 @@
                             {{ trans('cruds.physicalSwitch.fields.bay') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -80,6 +83,9 @@
                             </td>
                             <td>
                                 {!! $physicalSwitch->bay->name ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $physicalSwitch->maturity !!}
                             </td>
                             <td>
                                 @can('physical_switch_show')

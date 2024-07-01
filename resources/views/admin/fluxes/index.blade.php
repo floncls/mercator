@@ -41,6 +41,9 @@
                             {{ trans('cruds.flux.fields.crypted') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -134,6 +137,9 @@
                               @elseif ($flux->crypted==1)
                                   Oui
                               @endif
+                            </td>
+                            <td>
+                                {!! $flux->maturity !!}
                             </td>
                             <td>
                                 @can('flux_show')

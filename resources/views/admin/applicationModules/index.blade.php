@@ -29,6 +29,10 @@
                             {{ trans('cruds.applicationModule.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -46,6 +50,9 @@
                             </td>
                             <td>
                                 {!! $applicationModule->description !!}
+                            </td>
+                            <td>
+                                {!! $applicationModule->maturity !!}
                             </td>
                             <td>
                                 @can('application_module_show')

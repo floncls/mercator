@@ -29,6 +29,9 @@
                             {{ trans('cruds.site.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -46,6 +49,9 @@
                             </td>
                             <td>
                                 {!! $site->description ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $site->maturity !!}
                             </td>
                             <td>
                                 @can('site_show')

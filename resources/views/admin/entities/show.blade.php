@@ -160,6 +160,14 @@
                             @endforeach
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $entity->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

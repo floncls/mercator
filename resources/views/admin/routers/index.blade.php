@@ -29,6 +29,9 @@
                             {{ trans('cruds.router.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -46,6 +49,9 @@
                             </td>
                             <td>
                                 {!! $router->description ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $router->maturity !!}
                             </td>
                             <td>
                                 @can('router_show')

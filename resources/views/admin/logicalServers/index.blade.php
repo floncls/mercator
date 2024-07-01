@@ -29,6 +29,9 @@
                             {{ trans('cruds.logicalServer.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.logicalServer.fields.configuration') }}
                         </th>
                         <th>
@@ -69,6 +72,9 @@
                             </td>
                             <td>
                                 {!! $logicalServer->description !!}
+                            </td>
+                            <td>
+                                {!! $logicalServer->maturity !!}
                             </td>
                             <td>
                                 {!! $logicalServer->configuration !!}

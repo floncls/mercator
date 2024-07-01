@@ -48,12 +48,20 @@
                         {{ $physicalServer->type }}
                     </td>
                 </tr>
-                <th>
-                    {{ trans('cruds.physicalServer.fields.description') }}
-                </th>
-                <td colspan="3">
-                    {!! $physicalServer->description !!}
-                </td>
+                    <th>
+                        {{ trans('cruds.physicalServer.fields.description') }}
+                    </th>
+                    <td colspan="3">
+                        {!! $physicalServer->description !!}
+                    </td>
+                <tr>
+                    <th width="10%">
+                        {{ trans('cruds.maturity.maturity') }}
+                    </th>
+                    <td>
+                        {{ $physicalServer->maturity }}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

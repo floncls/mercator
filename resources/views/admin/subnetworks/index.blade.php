@@ -47,6 +47,9 @@
                             {{ trans('cruds.subnetwork.fields.network') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -102,6 +105,9 @@
                                         {{ $subnetwork->network->name ?? '' }}
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $subnetwork->maturity !!}
                             </td>
                             <td>
                                 @can('subnetwork_show')

@@ -31,6 +31,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 1,
                 'destination_id' => 6,
+                'maturity' => NULL,
             ),
             1 => 
             array (
@@ -44,6 +45,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 2,
                 'destination_id' => 6,
+                'maturity' => NULL,
             ),
             2 => 
             array (
@@ -57,6 +59,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 7,
                 'destination_id' => 1,
+                'maturity' => NULL,
             ),
             3 => 
             array (
@@ -70,6 +73,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 2,
                 'destination_id' => 6,
+                'maturity' => NULL,
             ),
             4 => 
             array (
@@ -83,6 +87,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 2,
                 'destination_id' => 6,
+                'maturity' => NULL,
             ),
             5 => 
             array (
@@ -96,6 +101,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 7,
                 'destination_id' => 2,
+                'maturity' => NULL,
             ),
             6 => 
             array (
@@ -109,6 +115,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 4,
                 'destination_id' => 6,
+                'maturity' => NULL,
             ),
             7 => 
             array (
@@ -122,6 +129,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 1,
                 'destination_id' => 5,
+                'maturity' => NULL,
             ),
             8 => 
             array (
@@ -135,6 +143,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 9,
                 'destination_id' => 1,
+                'maturity' => NULL,
             ),
             9 => 
             array (
@@ -148,6 +157,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 1,
                 'destination_id' => 8,
+                'maturity' => NULL,
             ),
             10 => 
             array (
@@ -161,6 +171,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => '2020-07-05 12:14:55',
                 'source_id' => 3,
                 'destination_id' => 2,
+                'maturity' => NULL,
             ),
             11 => 
             array (
@@ -174,6 +185,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 2,
                 'destination_id' => 4,
+                'maturity' => NULL,
             ),
             12 => 
             array (
@@ -187,6 +199,7 @@ class DemoRelationsTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'source_id' => 2,
                 'destination_id' => 12,
+                'maturity' => NULL,
             ),
         ));
         

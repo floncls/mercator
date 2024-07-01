@@ -66,6 +66,14 @@
                             {{ $actor->type }}
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $actor->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

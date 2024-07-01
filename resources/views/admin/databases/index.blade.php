@@ -35,6 +35,9 @@
                             {{ trans('cruds.database.fields.informations') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -69,6 +72,7 @@
                             <td>
                                 {!! $database->description ?? '' !!}
                             </td>
+
                             <td>
                                 {{ $database->type ?? '' }}
                             </td>
@@ -82,7 +86,9 @@
                                     @endif
                                 @endforeach
                             </td>
-                            
+                            <td>
+                                {!! $database->maturity !!}
+                            </td>
                             <td>
                                 @can('database_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.databases.show', $database->id) }}">

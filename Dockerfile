@@ -53,7 +53,11 @@ WORKDIR /var/www/mercator
 
 # Install Python dependencies
 COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m venv /venv && \
+    . /venv/bin/activate && \
+    pip install --upgrade pip && \
+    pip install --no-cache-dir -r /app/requirements.txt
+
 
 # Copy config files
 RUN cp docker/nginx.conf /etc/nginx/http.d/default.conf

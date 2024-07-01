@@ -53,6 +53,14 @@
                             {!! $router->rules !!}
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $router->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

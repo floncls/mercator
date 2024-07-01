@@ -35,6 +35,8 @@ class ApplicationBlock extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+
+        'maturity',
     ];
 
     public function applications()

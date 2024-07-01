@@ -32,6 +32,9 @@
                             {{ trans('cruds.bay.fields.room') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -56,6 +59,9 @@
                                     {{ $bay->room->name }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $bay->maturity !!}
                             </td>
                             <td>
                                 @can('bay_show')

@@ -25,6 +25,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-06-10 15:20:42',
                 'updated_at' => '2020-06-10 15:20:42',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             1 =>
             array(
@@ -34,6 +35,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-06-10 17:44:26',
                 'updated_at' => '2020-06-13 06:03:26',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             2 =>
             array(
@@ -43,6 +45,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-06-13 06:57:08',
                 'updated_at' => '2020-06-13 06:57:08',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             3 =>
             array(
@@ -52,6 +55,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-06-13 06:57:24',
                 'updated_at' => '2020-06-13 06:57:24',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             4 =>
             array(
@@ -61,6 +65,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2020-08-15 06:19:53',
                 'updated_at' => '2020-08-15 06:19:53',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             5 =>
             array(
@@ -70,6 +75,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2021-03-22 20:06:55',
                 'updated_at' => '2021-03-22 20:07:00',
                 'deleted_at' => '2021-03-22 20:07:00',
+                'maturity' => NULL,
             ),
             6 =>
             array(
@@ -79,6 +85,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2021-03-22 20:13:43',
                 'updated_at' => '2021-03-22 20:14:05',
                 'deleted_at' => '2021-03-22 20:14:05',
+                'maturity' => NULL,
             ),
             7 =>
             array(
@@ -88,6 +95,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2021-03-22 20:14:16',
                 'updated_at' => '2021-03-22 20:14:45',
                 'deleted_at' => '2021-03-22 20:14:45',
+                'maturity' => NULL,
             ),
             8 =>
             array(
@@ -97,6 +105,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2021-03-22 20:14:40',
                 'updated_at' => '2021-03-22 20:19:09',
                 'deleted_at' => '2021-03-22 20:19:09',
+                'maturity' => NULL,
             ),
             9 =>
             array(
@@ -106,6 +115,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2021-05-15 09:40:16',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             10 =>
             array(
@@ -115,6 +125,7 @@ class DemoActivitiesTableSeeder extends Seeder
                 'created_at' => '2021-08-02 22:03:46',
                 'updated_at' => '2021-09-22 12:59:48',
                 'deleted_at' => '2021-09-22 12:59:48',
+                'maturity' => NULL,
             ),
         ));
 

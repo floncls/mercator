@@ -202,7 +202,16 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.subnetwork.fields.network_helper') }}</span>
             </div>
-
+            <div class="form-group">
+                <label class="required" for="maturity">{{ trans('cruds.maturity.maturity') }}</label>
+                <input class="form-control {{ $errors->has('maturity') ? 'is-invalid' : '' }}" type="number" min="0" max="5" name="maturity" id="maturity" value="{{ old('maturity', $subnetwork->maturity) }}" required>
+                @if($errors->has('maturity'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('maturity') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.maturity.maturity_helper') }}</span>
+            </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}

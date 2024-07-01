@@ -41,6 +41,9 @@
                             {{ trans('cruds.operation.fields.activities') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -95,6 +98,9 @@
                                     @endif
                                     </a>
                                 @endforeach
+                            </td>
+                            <td>
+                                {!! $operation->maturity !!}
                             </td>
                             <td>
                                 @can('operation_show')

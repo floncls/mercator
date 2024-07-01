@@ -30,7 +30,10 @@
                         </th>                        
                         <th>
                             {{ trans('cruds.dnsserver.fields.address_ip') }}
-                        </th>                        
+                        </th>
+                        <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
                         <th>
                             &nbsp;
                         </th>
@@ -56,6 +59,9 @@
                             </td>
                             <td>
                                 {{ $dnsserver->address_ip ?? '' }}
+                            </td>
+                            <td>
+                                {!! $dnsserver->maturity !!}
                             </td>
                             <td>
                                 @can('dnsserver_show')

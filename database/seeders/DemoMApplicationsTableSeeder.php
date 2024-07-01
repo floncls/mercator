@@ -48,6 +48,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             1 => 
             array (
@@ -78,6 +79,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             2 => 
             array (
@@ -108,6 +110,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             3 => 
             array (
@@ -138,6 +141,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             4 => 
             array (
@@ -168,6 +172,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             5 => 
             array (
@@ -198,6 +203,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             6 => 
             array (
@@ -228,6 +234,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             7 => 
             array (
@@ -258,6 +265,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             8 => 
             array (
@@ -288,6 +296,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             9 => 
             array (
@@ -318,6 +327,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             10 => 
             array (
@@ -348,6 +358,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             11 => 
             array (
@@ -378,6 +389,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             12 => 
             array (
@@ -408,6 +420,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             13 => 
             array (
@@ -438,6 +451,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             14 => 
             array (
@@ -468,6 +482,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             15 => 
             array (
@@ -498,6 +513,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             16 => 
             array (
@@ -528,6 +544,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
             17 => 
             array (
@@ -558,6 +575,7 @@ class DemoMApplicationsTableSeeder extends Seeder
                 'rpo' => NULL,
                 'vendor' => NULL,
                 'product' => NULL,
+                'maturity' => NULL,
             ),
         ));
         

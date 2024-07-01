@@ -37,6 +37,8 @@ class ExternalConnectedEntity extends Model
         'network_id',
         'src',
         'dest',
+
+        'maturity',
     ];
 
     public function entity()

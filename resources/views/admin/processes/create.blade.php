@@ -219,24 +219,34 @@
         </div>
 
 
-        <div class="form-group">
-            <label class="recommended" for="macroprocessus_id">{{ trans('cruds.process.fields.macroprocessus') }}</label>
-            <select class="form-control select2 {{ $errors->has('macroprocessus') ? 'is-invalid' : '' }}" name="macroprocess_id" id="macroprocess_id">
-                <option></option>
-                @foreach($macroProcessuses as $id => $macroprocessus)
-                    <option value="{{ $id }}" {{ old('macroprocessus_id') == $id ? 'selected' : '' }}>{{ $macroprocessus }}</option>
-                @endforeach
-            </select>
-            @if($errors->has('macroprocessus'))
-                <div class="invalid-feedback">
-                    {{ $errors->first('macroprocessus') }}
-                </div>
-            @endif
-            <span class="help-block">{{ trans('cruds.process.fields.macroprocessus_helper') }}</span>
-        </div>
+            <div class="form-group">
+                <label class="recommended" for="macroprocessus_id">{{ trans('cruds.process.fields.macroprocessus') }}</label>
+                <select class="form-control select2 {{ $errors->has('macroprocessus') ? 'is-invalid' : '' }}" name="macroprocess_id" id="macroprocess_id">
+                    <option></option>
+                    @foreach($macroProcessuses as $id => $macroprocessus)
+                        <option value="{{ $id }}" {{ old('macroprocessus_id') == $id ? 'selected' : '' }}>{{ $macroprocessus }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('macroprocessus'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('macroprocessus') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.process.fields.macroprocessus_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label class="recommended" for="maturity">{{ trans('cruds.maturity.maturity') }}</label>
+                <input class="form-control {{ $errors->has('maturity') ? 'is-invalid' : '' }}" type="number" min="0" max="5" name="maturity" id="maturity" value="{{ old('maturity', '') }}">
+                @if($errors->has('maturity'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('maturity') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.maturity.maturity_helper') }}</span>
+            </div>
+    </div>
 
     </div>
-</div>
 
     <div class="form-group">
         <button class="btn btn-danger" type="submit">

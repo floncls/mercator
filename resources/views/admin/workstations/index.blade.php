@@ -35,6 +35,9 @@
                             {{ trans('cruds.workstation.fields.building') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -66,6 +69,9 @@
                                     {{ $workstation->building->name ?? '' }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $workstation->maturity !!}
                             </td>
                             <td>
                                 @can('workstation_show')

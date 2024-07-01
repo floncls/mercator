@@ -40,6 +40,9 @@
                         <th>
                             {{ trans('cruds.physicalRouter.fields.bay') }}
                         </th>
+                        <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
                       <th>
                             &nbsp;
                         </th>
@@ -70,7 +73,10 @@
                             </td>
                             <td>
                                 {{ $physicalRouter->bay->name ?? '' }}
-                            </td>                            
+                            </td>
+                            <td>
+                                {!! $physicalRouter->maturity !!}
+                            </td>
                             <td>
                                 @can('physical_router_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.physical-routers.show', $physicalRouter->id) }}">

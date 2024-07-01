@@ -54,6 +54,14 @@
                             {{ $dnsserver->address_ip }}
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $dnsserver->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

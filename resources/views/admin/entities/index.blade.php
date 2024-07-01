@@ -38,6 +38,9 @@
                             {{ trans('cruds.entity.fields.relations') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -78,6 +81,9 @@
                                     ,
                                     @endif
                                 @endforeach
+                            </td>
+                            <td>
+                                {!! $entity->maturity !!}
                             </td>
                             <td>
                                 @can('entity_show')

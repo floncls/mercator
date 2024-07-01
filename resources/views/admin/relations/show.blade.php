@@ -104,6 +104,14 @@
                             {!! $relation->description !!}
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $relation->maturity }}
+                        </td>
+                    </tr>
 
 
                 </table>

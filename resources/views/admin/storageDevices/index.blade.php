@@ -38,6 +38,9 @@
                             {{ trans('cruds.storageDevice.fields.bay') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -65,6 +68,10 @@
                             <td>
                                 {{ $storageDevice->bay->name ?? '' }}
                             </td>
+                            <td>
+                                {!! $storageDevice->maturity !!}
+                            </td>
+
                             <td>
                                 @can('storage_device_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.storage-devices.show', $storageDevice->id) }}">

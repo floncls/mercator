@@ -13,6 +13,8 @@ return [
           'operations_helper' => 'List of operations performed',
           'process' => 'Process',
           'processes_helper' => 'List of parent processes',
+          'maturity' => 'Maturity',
+          'maturity_helper' => 'Enter the maturity level',
       ],
       'report_title' => 'Register of Processing Activities',
       'title' => 'Activities',
@@ -1367,5 +1369,9 @@ return [
         'title' => 'Administration areas',
         'title_short' => 'Zones',
         'title_singular' => 'Administration area',
+    ],
+    'maturity' => [
+        'maturity' => 'Maturity',
+        'maturity_helper' => 'Enter the maturity level',
     ],
 ];

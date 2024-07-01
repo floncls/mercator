@@ -50,6 +50,9 @@
                             {{ trans('cruds.relation.fields.attributes') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -131,6 +134,9 @@
                                 @foreach(explode(" ",$relation->attributes) as $attribute)
                                 <span class="badge badge-info">{{ $attribute }}</span>
                                 @endforeach
+                            </td>
+                            <td>
+                                {!! $relation->maturity !!}
                             </td>
                             <td>
                                 @can('relation_show')

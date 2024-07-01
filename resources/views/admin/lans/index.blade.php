@@ -29,6 +29,9 @@
                             {{ trans('cruds.lan.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -46,6 +49,9 @@
                             </td>
                             <td>
                                 {!! $lan->description !!}
+                            </td>
+                            <td>
+                                {!! $lan->maturity !!}
                             </td>
                             <td>
                                 @can('lan_show')

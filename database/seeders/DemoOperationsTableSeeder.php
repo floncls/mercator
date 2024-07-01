@@ -28,6 +28,7 @@ class DemoOperationsTableSeeder extends Seeder
                 'updated_at' => '2020-06-13 02:02:42',
                 'deleted_at' => NULL,
                 'process_id' => NULL,
+                'maturity' => NULL,
             ),
             1 => 
             array (
@@ -38,6 +39,7 @@ class DemoOperationsTableSeeder extends Seeder
                 'updated_at' => '2020-06-13 02:02:58',
                 'deleted_at' => NULL,
                 'process_id' => NULL,
+                'maturity' => NULL,
             ),
             2 => 
             array (
@@ -48,6 +50,7 @@ class DemoOperationsTableSeeder extends Seeder
                 'updated_at' => '2020-07-15 16:34:52',
                 'deleted_at' => NULL,
                 'process_id' => NULL,
+                'maturity' => NULL,
             ),
             3 => 
             array (
@@ -58,6 +61,7 @@ class DemoOperationsTableSeeder extends Seeder
                 'updated_at' => '2020-07-15 16:34:02',
                 'deleted_at' => NULL,
                 'process_id' => NULL,
+                'maturity' => NULL,
             ),
             4 => 
             array (
@@ -68,6 +72,7 @@ class DemoOperationsTableSeeder extends Seeder
                 'updated_at' => '2020-08-15 06:01:40',
                 'deleted_at' => NULL,
                 'process_id' => NULL,
+                'maturity' => NULL,
             ),
         ));
         

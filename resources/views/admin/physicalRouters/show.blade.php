@@ -109,6 +109,14 @@
                             @endforeach
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $physicalRouter->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

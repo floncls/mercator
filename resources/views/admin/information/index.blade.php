@@ -38,6 +38,9 @@
                             {{ trans('cruds.information.fields.security_need') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -136,6 +139,9 @@
                                     <span> * </span>
                                 @endif                                    
 
+                            </td>
+                            <td>
+                                {!! $information->maturity !!}
                             </td>
                             <td>
                                 @can('information_show')

@@ -30,7 +30,16 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.database.fields.description_helper') }}</span>
             </div>
-
+            <div class="form-group">
+                <label class="required" for="maturity">{{ trans('cruds.maturity.maturity') }}</label>
+                <input class="form-control {{ $errors->has('maturity') ? 'is-invalid' : '' }}" type="number" min="0" max="5" name="maturity" id="maturity" value="{{ old('maturity', $database->maturity) }}" required>
+                @if($errors->has('maturity'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('maturity') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.maturity.maturity_helper') }}</span>
+            </div>
           <div class="row">
             <div class="col-sm">
 

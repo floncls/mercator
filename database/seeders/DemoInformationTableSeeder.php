@@ -37,6 +37,7 @@ class DemoInformationTableSeeder extends Seeder
                 'security_need_a' => 2,
                 'security_need_t' => 2,
                 'retention' => NULL,
+                'maturity' => NULL,
             ),
             1 => 
             array (
@@ -56,6 +57,7 @@ class DemoInformationTableSeeder extends Seeder
                 'security_need_a' => 1,
                 'security_need_t' => 1,
                 'retention' => NULL,
+                'maturity' => NULL,
             ),
             2 => 
             array (
@@ -75,6 +77,7 @@ class DemoInformationTableSeeder extends Seeder
                 'security_need_a' => 3,
                 'security_need_t' => 4,
                 'retention' => NULL,
+                'maturity' => NULL,
             ),
             3 => 
             array (
@@ -94,6 +97,7 @@ class DemoInformationTableSeeder extends Seeder
                 'security_need_a' => 1,
                 'security_need_t' => 1,
                 'retention' => NULL,
+                'maturity' => NULL,
             ),
             4 => 
             array (
@@ -113,6 +117,7 @@ class DemoInformationTableSeeder extends Seeder
                 'security_need_a' => 2,
                 'security_need_t' => 2,
                 'retention' => NULL,
+                'maturity' => NULL,
             ),
         ));
         

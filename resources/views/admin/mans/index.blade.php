@@ -29,6 +29,9 @@
                             {{ trans('cruds.man.fields.lans') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -46,6 +49,9 @@
                                 @foreach($man->lans as $key => $item)
                                     <span class="badge badge-info">{{ $item->name }}</span>
                                 @endforeach
+                            </td>
+                            <td>
+                                {!! $man->maturity !!}
                             </td>
                             <td>
                                 @can('man_show')

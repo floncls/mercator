@@ -36,7 +36,11 @@
                         </th>
                         <th>
                             {{ trans('cruds.externalConnectedEntity.fields.network') }}
-                        </th>                        
+                        </th>
+                        <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+
                         <th>
                             &nbsp;
                         </th>
@@ -72,6 +76,9 @@
                                         {{ $externalConnectedEntity->network->name }}
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $externalConnectedEntity->maturity !!}
                             </td>
                             <td>
                                 @can('external_connected_entity_show')

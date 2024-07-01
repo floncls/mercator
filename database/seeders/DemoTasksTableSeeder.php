@@ -27,6 +27,7 @@ class DemoTasksTableSeeder extends Seeder
                 'created_at' => '2020-06-13 02:04:07',
                 'updated_at' => '2020-06-13 02:04:07',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             1 =>
             array (
@@ -36,6 +37,7 @@ class DemoTasksTableSeeder extends Seeder
                 'created_at' => '2020-06-13 02:04:21',
                 'updated_at' => '2020-06-13 02:04:21',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
             2 =>
             array (
@@ -45,6 +47,7 @@ class DemoTasksTableSeeder extends Seeder
                 'created_at' => '2020-06-13 02:04:41',
                 'updated_at' => '2020-06-13 02:04:41',
                 'deleted_at' => NULL,
+                'maturity' => NULL,
             ),
         ));
 

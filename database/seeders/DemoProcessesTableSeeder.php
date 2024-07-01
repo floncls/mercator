@@ -34,6 +34,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 2,
                 'security_need_a' => 3,
                 'security_need_t' => 1,
+                'maturity' => NULL,
             ),
             1 =>
             array (
@@ -50,6 +51,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 4,
                 'security_need_a' => 2,
                 'security_need_t' => 4,
+                'maturity' => NULL,
             ),
             2 =>
             array (
@@ -66,6 +68,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 2,
                 'security_need_a' => 3,
                 'security_need_t' => 1,
+                'maturity' => NULL,
             ),
             3 =>
             array (
@@ -82,6 +85,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 2,
                 'security_need_a' => 2,
                 'security_need_t' => 2,
+                'maturity' => NULL,
             ),
             4 =>
             array (
@@ -98,6 +102,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => NULL,
                 'security_need_a' => NULL,
                 'security_need_t' => NULL,
+                'maturity' => NULL,
             ),
             5 =>
             array (
@@ -114,6 +119,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => NULL,
                 'security_need_a' => NULL,
                 'security_need_t' => NULL,
+                'maturity' => NULL,
             ),
             6 =>
             array (
@@ -130,6 +136,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => NULL,
                 'security_need_a' => NULL,
                 'security_need_t' => NULL,
+                'maturity' => NULL,
             ),
             7 =>
             array (
@@ -146,6 +153,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => NULL,
                 'security_need_a' => NULL,
                 'security_need_t' => NULL,
+                'maturity' => NULL,
             ),
             8 =>
             array (
@@ -162,6 +170,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 3,
                 'security_need_a' => 2,
                 'security_need_t' => 3,
+                'maturity' => NULL,
             ),
             9 =>
             array (
@@ -178,6 +187,7 @@ class DemoProcessesTableSeeder extends Seeder
                 'security_need_i' => 0,
                 'security_need_a' => 0,
                 'security_need_t' => 0,
+                'maturity' => NULL,
             ),
         ));
     }

@@ -57,6 +57,14 @@
                             @endforeach
                         </td>
                     </tr>
+                    <tr>
+                        <th width="10%">
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <td>
+                            {{ $wan->maturity }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

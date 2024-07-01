@@ -35,6 +35,9 @@
                             {{ trans('cruds.gateway.fields.ip') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -56,6 +59,9 @@
                             </td>
                             <td>
                                 {{ $gateway->ip ?? '' }}
+                            </td>
+                            <td>
+                                {!! $gateway->maturity !!}
                             </td>
                             <td>
                                 @can('gateway_show')

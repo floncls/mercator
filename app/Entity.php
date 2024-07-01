@@ -38,6 +38,8 @@ class Entity extends Model
         'is_external',
         'entity_type',
         'parent_entity_id',
+
+        'maturity',
     ];
 
     public function databases()

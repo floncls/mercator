@@ -32,6 +32,9 @@
                             {{ trans('cruds.vlan.fields.subnetworks') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -59,6 +62,9 @@
                                     ,
                                     @endif
                                 @endforeach                                
+                            </td>
+                            <td>
+                                {!! $vlan->maturity !!}
                             </td>
                             <td>
                                 @can('vlan_show')

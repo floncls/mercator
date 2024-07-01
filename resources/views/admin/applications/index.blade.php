@@ -38,6 +38,9 @@
                             {{ trans('cruds.application.fields.application_block') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                         </th>
                     </tr>
                 </thead>
@@ -104,6 +107,9 @@
                                 {{ $application->application_block->name ?? '' }}
                                 </a>
                                 @endif
+                            </td>
+                            <td>
+                                {!! $application->maturity !!}
                             </td>
                             <td>
                                 @can('m_application_show')

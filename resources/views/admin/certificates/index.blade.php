@@ -41,6 +41,9 @@
                             {{ trans('cruds.certificate.fields.status') }}
                         </th>
                         <th>
+                            {{ trans('cruds.maturity.maturity') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -90,7 +93,10 @@
                                 @elseif ($certificate->status==2)
                                     {{ trans('cruds.certificate.fields.status_unknown') }}
                                 @endif
-                            </td>                            
+                            </td>
+                            <td>
+                                {!! $certificate->maturity !!}
+                            </td>
                             <td>
                                 @can('certificate_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.certificates.show', $certificate->id) }}">
