@@ -17,64 +17,101 @@ class DemoApplicationModulesTableSeeder extends Seeder
         
 
         \DB::table('application_modules')->delete();
-        
+
         \DB::table('application_modules')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'name' => 'Module 1',
-                'description' => '<p>Description du module 1</p>',
-                'created_at' => '2020-06-13 11:55:34',
-                'updated_at' => '2020-06-13 11:55:34',
-                'deleted_at' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Module 2',
-                'description' => '<p>Description du module 2</p>',
-                'created_at' => '2020-06-13 11:55:45',
-                'updated_at' => '2020-06-13 11:55:45',
-                'deleted_at' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'Module 3',
-                'description' => '<p>Description du module 3</p>',
-                'created_at' => '2020-06-13 11:56:00',
-                'updated_at' => '2020-06-13 11:56:00',
-                'deleted_at' => NULL,
-            ),
-            3 => 
-            array (
-                'id' => 4,
-                'name' => 'Module 4',
-                'description' => '<p>Description du module 4</p>',
-                'created_at' => '2020-06-13 11:56:10',
-                'updated_at' => '2020-06-13 11:56:10',
-                'deleted_at' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 5,
-                'name' => 'Module 5',
-                'description' => '<p>Description du module 5</p>',
-                'created_at' => '2020-06-13 11:56:20',
-                'updated_at' => '2020-06-13 11:56:20',
-                'deleted_at' => NULL,
-            ),
-            5 => 
-            array (
-                'id' => 6,
-                'name' => 'Module 6',
-                'description' => '<p>Description du module 6</p>',
-                'created_at' => '2020-06-13 11:56:32',
-                'updated_at' => '2020-06-13 11:56:32',
-                'deleted_at' => NULL,
-            ),
+            0 =>
+                array (
+                    'id' => 1,
+                    'name' => 'Gestion des Patients',
+                    'description' => '<p>Module de gestion des dossiers et informations des patients</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            1 =>
+                array (
+                    'id' => 2,
+                    'name' => 'Évaluation de la Qualité',
+                    'description' => '<p>Module d\'évaluation et de suivi de la qualité des soins</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            2 =>
+                array (
+                    'id' => 3,
+                    'name' => 'Gestion des Dossiers Médicaux',
+                    'description' => '<p>Module de gestion et d\'archivage des dossiers médicaux électroniques</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            3 =>
+                array (
+                    'id' => 4,
+                    'name' => 'Achats et Marchés Publics',
+                    'description' => '<p>Module de gestion des achats et des marchés publics</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            4 =>
+                array (
+                    'id' => 5,
+                    'name' => 'Planification RH',
+                    'description' => '<p>Module de planification et de gestion des ressources humaines</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            5 =>
+                array (
+                    'id' => 6,
+                    'name' => 'Gestion des Salaires',
+                    'description' => '<p>Module de gestion des salaires et rémunérations</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            6 =>
+                array (
+                    'id' => 7,
+                    'name' => 'Médecine du Travail',
+                    'description' => '<p>Module de gestion de la médecine du travail</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            7 =>
+                array (
+                    'id' => 8,
+                    'name' => 'Intranet',
+                    'description' => '<p>Module de gestion de l\'intranet de l\'organisation</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            8 =>
+                array (
+                    'id' => 9,
+                    'name' => 'Extranet',
+                    'description' => '<p>Module de gestion de l\'extranet de l\'organisation</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
         ));
-        
-        
+
+
+
     }
 }

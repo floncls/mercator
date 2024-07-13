@@ -14,76 +14,66 @@ class DemoWorkstationsTableSeeder extends Seeder
      */
     public function run()
     {
-        
-
         \DB::table('workstations')->delete();
-        
-        \DB::table('workstations')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'name' => 'Workstation 1',
-                'description' => '<p>Station de travail compta</p>',
-                'created_at' => '2020-06-21 17:09:04',
-                'updated_at' => '2022-03-20 12:37:13',
-                'deleted_at' => NULL,
+
+        $workstations = [];
+
+        // Création des 10 PC classiques
+        for ($i = 1; $i <= 10; $i++) {
+            $workstations[] = [
+                'id' => $i,
+                'name' => 'PC' . $i,
+                'description' => '<p>Station de travail pour le personnel.</p>',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
                 'site_id' => 1,
-                'building_id' => 7,
-                'physical_switch_id' => NULL,
-                'type' => 'ThinThink 460',
-                'operating_system' => NULL,
-                'address_ip' => NULL,
-                'cpu' => NULL,
-                'memory' => NULL,
-                'disk' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Workstation 2',
-                'description' => '<p>Station de travail accueil</p>',
-                'created_at' => '2020-06-21 17:09:54',
-                'updated_at' => '2021-10-20 09:14:59',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'building_id' => 3,
-                'physical_switch_id' => NULL,
-                'type' => 'ThinThink 410',
-                'operating_system' => NULL,
-                'address_ip' => NULL,
-                'cpu' => NULL,
-                'memory' => NULL,
-                'disk' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'Workstation 3',
-                'description' => '<p>Station de travail back-office</p>',
-                'created_at' => '2020-06-21 17:17:57',
-                'updated_at' => '2021-10-20 09:15:25',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'building_id' => 4,
-                'physical_switch_id' => NULL,
-                'type' => 'ThinThink 420',
-                'operating_system' => NULL,
-                'address_ip' => NULL,
-                'cpu' => NULL,
-                'memory' => NULL,
-                'disk' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-        ));
-        
-        
+                'building_id' => 1, // Administration
+                'physical_switch_id' => null,
+                'type' => 'Dell OptiPlex 7080',
+                'operating_system' => 'Windows 10',
+                'address_ip' => '192.168.1.' . (20 + $i),
+                'cpu' => 'Intel i5',
+                'memory' => '16GB',
+                'disk' => '512GB SSD',
+                'vendor' => 'Dell',
+                'product' => 'OptiPlex',
+                'version' => '7080',
+                'maturity' => 5,
+            ];
+        }
+
+        // Création des 75 thin clients
+        for ($i = 11; $i <= 85; $i++) {
+            $workstations[] = [
+                'id' => $i,
+                'name' => 'Thin Client ' . ($i - 10),
+                'description' => '<p>Thin client pour accès distant aux applications.</p>',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+                'site_id' => 1,
+                'building_id' => 1, // Administration
+                'physical_switch_id' => null,
+                'type' => 'ThinClient 420',
+                'operating_system' => 'ThinOS',
+                'address_ip' => '192.168.1.' . (30 + ($i - 10)),
+                'cpu' => null,
+                'memory' => null,
+                'disk' => null,
+                'vendor' => 'Dell',
+                'product' => 'ThinClient',
+                'version' => '420',
+                'maturity' => 4,
+            ];
+        }
+
+        foreach ($workstations as $workstation) {
+            \DB::table('workstations')->insert(array_merge($workstation, [
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+            ]));
+        }
     }
 }

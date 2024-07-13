@@ -20,36 +20,87 @@ class DemoTasksTableSeeder extends Seeder
 
         \DB::table('tasks')->insert(array (
             0 =>
-            array (
-                'id' => 1,
-                'name' => 'Tâche 1',
-                'description' => 'Descriptionde la tâche 1',
-                'created_at' => '2020-06-13 02:04:07',
-                'updated_at' => '2020-06-13 02:04:07',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
+                array (
+                    'id' => 1,
+                    'name' => 'Administration des médicaments',
+                    'description' => 'Administration des médicaments aux patients selon les prescriptions.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
             1 =>
-            array (
-                'id' => 2,
-                'name' => 'Tache 2',
-                'description' => 'Description de la tâche 2',
-                'created_at' => '2020-06-13 02:04:21',
-                'updated_at' => '2020-06-13 02:04:21',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
+                array (
+                    'id' => 2,
+                    'name' => 'Diagnostic des patients',
+                    'description' => 'Évaluation et diagnostic des conditions médicales des patients.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
             2 =>
-            array (
-                'id' => 3,
-                'name' => 'Tâche 3',
-                'description' => 'Description de la tâche 3',
-                'created_at' => '2020-06-13 02:04:41',
-                'updated_at' => '2020-06-13 02:04:41',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
+                array (
+                    'id' => 3,
+                    'name' => 'Coordination des rendez-vous',
+                    'description' => 'Organisation et planification des rendez-vous des patients.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            3 =>
+                array (
+                    'id' => 4,
+                    'name' => 'Maintenance des équipements médicaux',
+                    'description' => 'Entretien et vérification des équipements médicaux.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            4 =>
+                array (
+                    'id' => 5,
+                    'name' => 'Conseil sur les prescriptions',
+                    'description' => 'Fournir des conseils aux médecins concernant les prescriptions médicamenteuses.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            5 =>
+                array (
+                    'id' => 6,
+                    'name' => 'Élaboration de programmes de réhabilitation',
+                    'description' => 'Création de programmes de réhabilitation adaptés aux patients.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            6 =>
+                array (
+                    'id' => 7,
+                    'name' => 'Soutien aux patients et familles',
+                    'description' => 'Offrir un soutien émotionnel et social aux patients et leurs familles.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            7 =>
+                array (
+                    'id' => 8,
+                    'name' => 'Supervision des opérations quotidiennes',
+                    'description' => 'Veiller à la bonne marche des opérations au sein de l’hôpital.',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
         ));
+
 
 
     }

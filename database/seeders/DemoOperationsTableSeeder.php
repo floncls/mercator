@@ -17,65 +17,121 @@ class DemoOperationsTableSeeder extends Seeder
         
 
         \DB::table('operations')->delete();
-        
+
         \DB::table('operations')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'name' => 'Operation 1',
-                'description' => '<p>Description de l\'opération</p>',
-                'created_at' => '2020-06-13 02:02:42',
-                'updated_at' => '2020-06-13 02:02:42',
-                'deleted_at' => NULL,
-                'process_id' => NULL,
-                'maturity' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Operation 2',
-                'description' => '<p>Description de l\'opération</p>',
-                'created_at' => '2020-06-13 02:02:58',
-                'updated_at' => '2020-06-13 02:02:58',
-                'deleted_at' => NULL,
-                'process_id' => NULL,
-                'maturity' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'Operation 3',
-                'description' => '<p>Desciption de l\'opération</p>',
-                'created_at' => '2020-06-13 02:03:11',
-                'updated_at' => '2020-07-15 16:34:52',
-                'deleted_at' => NULL,
-                'process_id' => NULL,
-                'maturity' => NULL,
-            ),
-            3 => 
-            array (
-                'id' => 4,
-                'name' => 'Operation 4',
-                'description' => NULL,
-                'created_at' => '2020-07-15 16:34:02',
-                'updated_at' => '2020-07-15 16:34:02',
-                'deleted_at' => NULL,
-                'process_id' => NULL,
-                'maturity' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 5,
-                'name' => 'Master operation',
-                'description' => '<p>Opération maitre</p>',
-                'created_at' => '2020-08-15 06:01:40',
-                'updated_at' => '2020-08-15 06:01:40',
-                'deleted_at' => NULL,
-                'process_id' => NULL,
-                'maturity' => NULL,
-            ),
+            0 =>
+                array (
+                    'id' => 1,
+                    'name' => 'Admission des patients',
+                    'description' => '<p>Enregistrement des informations personnelles et médicales des nouveaux patients.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            1 =>
+                array (
+                    'id' => 2,
+                    'name' => 'Planification des consultations',
+                    'description' => '<p>Organisation des rendez-vous médicaux entre les patients et les médecins.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            2 =>
+                array (
+                    'id' => 3,
+                    'name' => 'Réalisation d’examens',
+                    'description' => '<p>Coordination et exécution des examens médicaux (radiographies, analyses de sang).</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            3 =>
+                array (
+                    'id' => 4,
+                    'name' => 'Administration des traitements',
+                    'description' => '<p>Gestion de l’administration des médicaments aux patients, incluant le suivi des prescriptions.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            4 =>
+                array (
+                    'id' => 5,
+                    'name' => 'Gestion des urgences',
+                    'description' => '<p>Triage et traitement des cas d\'urgence dans le service des urgences.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            5 =>
+                array (
+                    'id' => 6,
+                    'name' => 'Gestion des dossiers médicaux',
+                    'description' => '<p>Maintien et mise à jour des dossiers médicaux des patients.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            6 =>
+                array (
+                    'id' => 7,
+                    'name' => 'Facturation et paiements',
+                    'description' => '<p>Émission de factures aux patients et gestion des paiements.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            7 =>
+                array (
+                    'id' => 8,
+                    'name' => 'Suivi des patients',
+                    'description' => '<p>Surveillance continue de l\'état de santé des patients.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            8 =>
+                array (
+                    'id' => 9,
+                    'name' => 'Gestion des ressources humaines',
+                    'description' => '<p>Recrutement et gestion des employés de l\'hôpital.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            9 =>
+                array (
+                    'id' => 10,
+                    'name' => 'Gestion des stocks',
+                    'description' => '<p>Contrôle des fournitures médicales et gestion des commandes.</p>',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'process_id' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
         ));
-        
-        
+
+
+
     }
 }

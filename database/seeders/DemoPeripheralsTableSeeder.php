@@ -17,61 +17,68 @@ class DemoPeripheralsTableSeeder extends Seeder
         
 
         \DB::table('peripherals')->delete();
-        
-        \DB::table('peripherals')->insert(array (
-            0 => 
-            array (
+
+        $peripherals = [
+            [
                 'id' => 1,
                 'name' => 'PER_01',
                 'type' => 'IBM 3400',
-                'description' => '<p>important peripheral</p>',
+                'description' => '<p>Périphérique important pour l\'impression.</p>',
                 'responsible' => 'Marcel',
-                'created_at' => '2020-07-25 08:18:40',
-                'updated_at' => '2020-07-25 08:19:46',
-                'deleted_at' => NULL,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+                'site_id' => 1,
+                'building_id' => 2, // Salle serveur
+                'bay_id' => null,
+                'vendor' => 'IBM',
+                'product' => '3400',
+                'version' => '1.0',
+                'maturity' => 2,
+            ],
+            [
+                'id' => 2,
+                'name' => 'HP LaserJet Pro 4001dn',
+                'type' => 'Imprimante',
+                'description' => '<p>Imprimante laser pour documents administratifs.</p>',
+                'responsible' => 'Équipe IT',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
                 'site_id' => 1,
                 'building_id' => 2,
-                'bay_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'PER_02',
-                'type' => 'IBM 5600',
-                'description' => '<p>Description</p>',
-                'responsible' => 'Nestor',
-                'created_at' => '2020-07-25 08:19:18',
-                'updated_at' => '2020-07-25 08:19:18',
-                'deleted_at' => NULL,
-                'site_id' => 3,
-                'building_id' => 5,
-                'bay_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            2 => 
-            array (
+                'bay_id' => null,
+                'vendor' => 'HP',
+                'product' => 'LaserJet Pro 4001dn',
+                'version' => '1.0',
+                'maturity' => 1,
+            ],
+            [
                 'id' => 3,
-                'name' => 'PER_03',
-                'type' => 'HAL 8100',
-                'description' => '<p>Space device</p>',
-                'responsible' => 'Niel',
-                'created_at' => '2020-07-25 08:19:58',
-                'updated_at' => '2020-07-25 08:20:18',
-                'deleted_at' => NULL,
-                'site_id' => 3,
-                'building_id' => 4,
-                'bay_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-        ));
-        
-        
+                'name' => 'HP ColorLaserJet Pro M255dw',
+                'type' => 'Imprimante',
+                'description' => '<p>Imprimante couleur pour documents variés.</p>',
+                'responsible' => 'Équipe IT',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+                'site_id' => 1,
+                'building_id' => 2,
+                'bay_id' => null,
+                'vendor' => 'HP',
+                'product' => 'ColorLaserJet Pro M255dw',
+                'version' => '1.0',
+                'maturity' => NULL,
+            ],
+            // Ajouter d'autres périphériques si nécessaire
+        ];
+
+        foreach ($peripherals as $peripheral) {
+            \DB::table('peripherals')->insert(array_merge($peripheral, [
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+            ]));
+        }
     }
 }

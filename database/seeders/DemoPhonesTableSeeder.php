@@ -17,58 +17,65 @@ class DemoPhonesTableSeeder extends Seeder
         
 
         \DB::table('phones')->delete();
-        
-        \DB::table('phones')->insert(array (
-            0 => 
-            array (
+
+        $phones = [
+            [
                 'id' => 1,
                 'name' => 'Phone 01',
                 'description' => '<p>Téléphone de test</p>',
-                'type' => 'MOTOROAL 3110',
-                'created_at' => '2020-07-21 07:16:46',
-                'updated_at' => '2020-07-25 09:15:17',
-                'deleted_at' => NULL,
+                'type' => 'MOTOROLA 3110',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+                'site_id' => 1,
+                'building_id' => 1, // Administration
+                'physical_switch_id' => null,
+                'vendor' => 'Motorola',
+                'product' => '3110',
+                'version' => '1.0',
+                'maturity' => 1,
+            ],
+            [
+                'id' => 2,
+                'name' => 'Phone 02',
+                'description' => '<p>Téléphone fixe de bureau</p>',
+                'type' => 'Cisco 8841',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
                 'site_id' => 1,
                 'building_id' => 1,
-                'physical_switch_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Phone 03',
-                'description' => '<p>Special AA phone</p>',
-                'type' => 'Top secret red phne',
-                'created_at' => '2020-07-21 07:18:01',
-                'updated_at' => '2020-07-25 09:25:38',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'building_id' => 4,
-                'physical_switch_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-            2 => 
-            array (
+                'physical_switch_id' => null,
+                'vendor' => 'Cisco',
+                'product' => '8841',
+                'version' => '1.0',
+                'maturity' => 5,
+            ],
+            [
                 'id' => 3,
-                'name' => 'Phone 02',
-                'description' => '<p>Description phone 02</p>',
-                'type' => 'IPhone 2',
-                'created_at' => '2020-07-25 08:52:23',
-                'updated_at' => '2020-07-25 09:25:19',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'building_id' => 3,
-                'physical_switch_id' => NULL,
-                'vendor' => NULL,
-                'product' => NULL,
-                'version' => NULL,
-            ),
-        ));
-        
-        
+                'name' => 'Phone 03',
+                'description' => '<p>Téléphone mobile pour le personnel</p>',
+                'type' => 'Samsung Galaxy S21',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+                'site_id' => 1,
+                'building_id' => 1,
+                'physical_switch_id' => null,
+                'vendor' => 'Samsung',
+                'product' => 'Galaxy S21',
+                'version' => '1.0',
+                'maturity' => NULL,
+            ],
+            // Ajouter d'autres téléphones si nécessaire
+        ];
+
+        foreach ($phones as $phone) {
+            \DB::table('phones')->insert(array_merge($phone, [
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+            ]));
+        }
     }
 }

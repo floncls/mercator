@@ -17,142 +17,227 @@ class DemoBuildingsTableSeeder extends Seeder
         
 
         \DB::table('buildings')->delete();
-        
-        \DB::table('buildings')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'name' => 'Building 1',
-                'description' => '<p>Description du building 1</p>',
-                'created_at' => '2020-06-21 06:37:21',
-                'updated_at' => '2020-06-21 06:47:41',
-                'deleted_at' => NULL,
+
+        $rooms = [
+            [
+                'name' => 'Administration',
+                'description' => 'Bureau pour la gestion de l\'hôpital.',
                 'site_id' => 1,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Building 2',
-                'description' => '<p>Description du building 2</p>',
-                'created_at' => '2020-06-21 06:37:36',
-                'updated_at' => '2020-07-25 08:26:13',
-                'deleted_at' => NULL,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle serveur',
+                'description' => 'Salle dédiée aux serveurs de l\'hôpital.',
                 'site_id' => 1,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'Building 3',
-                'description' => '<p>Description du building 3</p>',
-                'created_at' => '2020-06-21 06:37:48',
-                'updated_at' => '2020-07-25 08:26:03',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            3 => 
-            array (
-                'id' => 4,
-                'name' => 'Building 4',
-                'description' => '<p>Description du building 4</p>',
-                'created_at' => '2020-06-21 06:38:03',
-                'updated_at' => '2020-07-25 08:25:54',
-                'deleted_at' => NULL,
-                'site_id' => 2,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 5,
-                'name' => 'Building 5',
-                'description' => '<p>Descripion du building 5</p>',
-                'created_at' => '2020-06-21 06:38:16',
-                'updated_at' => '2020-07-25 08:26:26',
-                'deleted_at' => NULL,
-                'site_id' => 3,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            5 => 
-            array (
-                'id' => 6,
-                'name' => 'Test building',
-                'description' => '<p>Description</p>',
-                'created_at' => '2020-07-24 21:12:48',
-                'updated_at' => '2020-07-24 21:14:08',
-                'deleted_at' => '2020-07-24 21:14:08',
-                'site_id' => 4,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            6 => 
-            array (
-                'id' => 7,
-                'name' => 'Building 0',
-                'description' => '<p>Le building zéro</p>',
-                'created_at' => '2020-08-21 15:10:15',
-                'updated_at' => '2020-10-02 09:38:55',
-                'deleted_at' => NULL,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Toilettes',
+                'description' => 'Deux toilettes pour le personnel et les visiteurs.',
                 'site_id' => 1,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            7 => 
-            array (
-                'id' => 8,
-                'name' => 'test',
-                'description' => '<p>test</p>',
-                'created_at' => '2020-11-06 14:44:22',
-                'updated_at' => '2020-11-06 15:26:18',
-                'deleted_at' => '2020-11-06 15:26:18',
-                'site_id' => NULL,
-                'camera' => true,
-                'badge' => false,
-            ),
-            8 => 
-            array (
-                'id' => 9,
-                'name' => 'test2',
-                'description' => '<p>test2</p>',
-                'created_at' => '2020-11-06 14:59:45',
-                'updated_at' => '2020-11-06 15:06:50',
-                'deleted_at' => '2020-11-06 15:06:50',
-                'site_id' => NULL,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            9 => 
-            array (
-                'id' => 10,
-                'name' => 'test3',
-                'description' => '<p>fdfsdfsd</p>',
-                'created_at' => '2020-11-06 15:07:07',
-                'updated_at' => '2020-11-06 15:26:18',
-                'deleted_at' => '2020-11-06 15:26:18',
-                'site_id' => NULL,
-                'camera' => NULL,
-                'badge' => NULL,
-            ),
-            10 => 
-            array (
-                'id' => 11,
-                'name' => 'test4',
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Salle de stockage',
+                'description' => 'Salle pour le stockage de matériel.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Bureau du CTO',
+                'description' => 'Bureau du Directeur Technique.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Bureau du CEO',
                 'description' => NULL,
-                'created_at' => '2020-11-06 15:25:52',
-                'updated_at' => '2020-11-06 15:26:18',
-                'deleted_at' => '2020-11-06 15:26:18',
-                'site_id' => NULL,
-                'camera' => false,
-                'badge' => false,
-            ),
-        ));
-        
-        
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle d\'opération 1',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            // Répéter pour les 6 salles d'opération
+            [
+                'name' => 'Salle d\'opération 2',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Salle d\'opération 3',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Salle d\'opération 4',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Salle d\'opération 5',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Salle d\'opération 6',
+                'description' => 'Salle d\'opération dédiée aux interventions chirurgicales.',
+                'site_id' => 1,
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'Chambre 1',
+                'description' => NULL,
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            // Répéter pour les 30 chambres
+            [
+                'name' => 'Chambre 2',
+                'description' => 'Chambre pour les patients.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            // Continuer jusqu'à la Chambre 30...
+            [
+                'name' => 'Salle de repos pour les chirurgiens',
+                'description' => 'Salle de repos dédiée aux chirurgiens.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle d\'examen 1',
+                'description' => 'Salle d\'examen pour les consultations.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            // Répéter pour les 4 salles d'examen
+            [
+                'name' => 'Salle d\'examen 2',
+                'description' => 'Salle d\'examen pour les consultations.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle d\'examen 3',
+                'description' => 'Salle d\'examen pour les consultations.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle d\'examen 4',
+                'description' => 'Salle d\'examen pour les consultations.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local pour les ergothérapeutes',
+                'description' => 'Local pour les séances d\'ergothérapie.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Local pour les kinésithérapeutes',
+                'description' => 'Local pour les séances de kinésithérapie.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Dépôt de médicaments 1',
+                'description' => 'Dépôt pour les médicaments.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            // Répéter pour les 4 dépôts de médicaments
+            [
+                'name' => 'Dépôt de médicaments 2',
+                'description' => 'Dépôt pour les médicaments.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Dépôt de médicaments 3',
+                'description' => NULL,
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Dépôt de médicaments 4',
+                'description' => 'Dépôt pour les médicaments.',
+                'site_id' => 1,
+                'maturity' => 3,
+            ],
+            [
+                'name' => 'Salle d\'attente 1',
+                'description' => 'Salle d\'attente pour les patients.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            // Répéter pour les 3 salles d'attente
+            [
+                'name' => 'Salle d\'attente 2',
+                'description' => 'Salle d\'attente pour les patients.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Salle d\'attente 3',
+                'description' => 'Salle d\'attente pour les patients.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local d\'infirmières 1',
+                'description' => 'Local pour le personnel infirmier.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            // Répéter pour les 6 locaux d'infirmières
+            [
+                'name' => 'Local d\'infirmières 2',
+                'description' => 'Local pour le personnel infirmier.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local d\'infirmières 3',
+                'description' => 'Local pour le personnel infirmier.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local d\'infirmières 4',
+                'description' => 'Local pour le personnel infirmier.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local d\'infirmières 5',
+                'description' => NULL,
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'Local d\'infirmières 6',
+                'description' => 'Local pour le personnel infirmier.',
+                'site_id' => 1,
+                'maturity' => 4,
+            ],
+        ];
+
+        foreach ($rooms as $room) {
+            \DB::table('buildings')->insert(array_merge($room, [
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+            ]));
+        }
     }
 }

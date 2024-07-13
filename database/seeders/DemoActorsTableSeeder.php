@@ -17,82 +17,98 @@ class DemoActorsTableSeeder extends Seeder
         
 
         \DB::table('actors')->delete();
-        
+
         \DB::table('actors')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
-                'name' => 'Jean',
-                'nature' => 'Personne',
-                'type' => 'interne',
-                'contact' => 'jean@testdomain.org',
-                'created_at' => '2020-06-14 13:02:22',
-                'updated_at' => '2021-05-16 19:37:49',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Service 1',
-                'nature' => 'Groupe',
-                'type' => 'interne',
-                'contact' => NULL,
-                'created_at' => '2020-06-14 13:02:39',
-                'updated_at' => '2020-06-17 16:43:42',
-                'deleted_at' => '2020-06-17 16:43:42',
-                'maturity' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'Service 2',
-                'nature' => 'Groupe',
-                'type' => 'Interne',
-                'contact' => NULL,
-                'created_at' => '2020-06-14 13:02:54',
-                'updated_at' => '2020-06-17 16:43:46',
-                'deleted_at' => '2020-06-17 16:43:46',
-                'maturity' => NULL,
-            ),
-            3 => 
-            array (
-                'id' => 4,
-                'name' => 'Pierre',
-                'nature' => 'Personne',
-                'type' => 'interne',
-                'contact' => 'email : pierre@testdomain.com',
-                'created_at' => '2020-06-17 16:44:01',
-                'updated_at' => '2021-05-16 19:38:19',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 5,
-                'name' => 'Jacques',
-                'nature' => 'personne',
-                'type' => 'interne',
-                'contact' => 'Téléphone 1234543423',
-                'created_at' => '2020-06-17 16:44:23',
-                'updated_at' => '2020-06-17 16:44:23',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
-            5 => 
-            array (
-                'id' => 6,
-                'name' => 'Fournisseur 1',
-                'nature' => 'entité',
-                'type' => 'externe',
-                'contact' => 'Tel : 1232 32312',
-                'created_at' => '2020-06-17 16:44:50',
-                'updated_at' => '2020-06-17 16:44:50',
-                'deleted_at' => NULL,
-                'maturity' => NULL,
-            ),
+            0 =>
+                array (
+                    'id' => 1,
+                    'name' => 'Madame Katherine Gobble',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            1 =>
+                array (
+                    'id' => 2,
+                    'name' => 'Madame Heidi E. Lamar',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            2 =>
+                array (
+                    'id' => 3,
+                    'name' => 'Madame Margaret Hamilton',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            3 =>
+                array (
+                    'id' => 4,
+                    'name' => 'Équipe IT',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            4 =>
+                array (
+                    'id' => 5,
+                    'name' => 'Médecins et Chirurgiens',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            5 =>
+                array (
+                    'id' => 6,
+                    'name' => 'Infirmières',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            6 =>
+                array (
+                    'id' => 7,
+                    'name' => 'Département Légal',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            7 =>
+                array (
+                    'id' => 8,
+                    'name' => 'Département Financier',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            8 =>
+                array (
+                    'id' => 9,
+                    'name' => 'Équipe d\'Évaluation de la Qualité',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
+            9 =>
+                array (
+                    'id' => 10,
+                    'name' => 'Ergothérapeutes et Kinésithérapeutes',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'deleted_at' => NULL,
+                    'maturity' => rand(0, 5),
+                ),
         ));
-        
-        
     }
 }

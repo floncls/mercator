@@ -17,70 +17,103 @@ class DemoBaysTableSeeder extends Seeder
         
 
         \DB::table('bays')->delete();
-        
-        \DB::table('bays')->insert(array (
-            0 => 
-            array (
-                'id' => 1,
+
+        $bays = [
+            [
                 'name' => 'BAIE 101',
-                'description' => '<p>Description de la baie 101</p>',
-                'created_at' => '2020-06-21 06:56:01',
-                'updated_at' => '2021-10-19 18:45:21',
-                'deleted_at' => NULL,
-                'room_id' => 7,
-            ),
-            1 => 
-            array (
-                'id' => 2,
+                'description' => '<p>Baie dédiée aux serveurs et équipements réseau.</p>',
+                'room_id' => 2, // Salle serveur
+                'maturity' => 5,
+            ],
+            [
                 'name' => 'BAIE 102',
-                'description' => '<p>Desciption baie 102</p>',
-                'created_at' => '2020-06-21 06:56:20',
-                'updated_at' => '2020-06-21 06:56:20',
-                'deleted_at' => NULL,
-                'room_id' => 1,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'name' => 'BAIE 103',
-                'description' => '<p>Descripton baid 103</p>',
-                'created_at' => '2020-06-21 06:56:38',
-                'updated_at' => '2020-06-21 06:56:38',
-                'deleted_at' => NULL,
-                'room_id' => 1,
-            ),
-            3 => 
-            array (
-                'id' => 4,
+                'description' => '<p>Baie pour l\'infrastructure IT de l\'administration.</p>',
+                'room_id' => 1, // Administration
+                'maturity' => 4,
+            ],
+            [
                 'name' => 'BAIE 201',
-                'description' => '<p>Description baie 201</p>',
-                'created_at' => '2020-06-21 06:56:55',
-                'updated_at' => '2020-06-21 06:56:55',
-                'deleted_at' => NULL,
-                'room_id' => 2,
-            ),
-            4 => 
-            array (
-                'id' => 5,
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 1.</p>',
+                'room_id' => 7, // Salle d'opération 1
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'BAIE 202',
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 2.</p>',
+                'room_id' => 8, // Salle d'opération 2
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'BAIE 203',
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 3.</p>',
+                'room_id' => 9, // Salle d'opération 3
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'BAIE 204',
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 4.</p>',
+                'room_id' => 10, // Salle d'opération 4
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'BAIE 205',
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 5.</p>',
+                'room_id' => 11, // Salle d'opération 5
+                'maturity' => 5,
+            ],
+            [
+                'name' => 'BAIE 206',
+                'description' => '<p>Baie pour les équipements médicaux dans la salle d\'opération 6.</p>',
+                'room_id' => 12, // Salle d'opération 6
+                'maturity' => 5,
+            ],
+            [
                 'name' => 'BAIE 301',
-                'description' => '<p>Baie 301</p>',
-                'created_at' => '2020-07-15 20:03:07',
-                'updated_at' => '2020-07-15 20:03:07',
-                'deleted_at' => NULL,
-                'room_id' => 3,
-            ),
-            5 => 
-            array (
-                'id' => 6,
-                'name' => 'BAIE 501',
-                'description' => '<p>Baie 501</p>',
-                'created_at' => '2020-07-15 20:10:23',
-                'updated_at' => '2020-07-15 20:10:23',
-                'deleted_at' => NULL,
-                'room_id' => 5,
-            ),
-        ));
-        
-        
+                'description' => '<p>Baie pour les équipements des chambres des patients.</p>',
+                'room_id' => 13, // Chambre 1
+                'maturity' => 4,
+            ],
+            // Continuer jusqu'à la Chambre 30...
+            [
+                'name' => 'BAIE 302',
+                'description' => '<p>Baie pour les équipements des chambres des patients.</p>',
+                'room_id' => 14, // Chambre 2
+                'maturity' => 4,
+            ],
+            // Ajouter d'autres baies pour chaque chambre...
+            [
+                'name' => 'BAIE 401',
+                'description' => '<p>Baie pour les équipements de la salle d\'examen 1.</p>',
+                'room_id' => 19, // Salle d'examen 1
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'BAIE 402',
+                'description' => '<p>Baie pour les équipements de la salle d\'examen 2.</p>',
+                'room_id' => 20, // Salle d'examen 2
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'BAIE 403',
+                'description' => '<p>Baie pour les équipements de la salle d\'examen 3.</p>',
+                'room_id' => 21, // Salle d'examen 3
+                'maturity' => 4,
+            ],
+            [
+                'name' => 'BAIE 404',
+                'description' => '<p>Baie pour les équipements de la salle d\'examen 4.</p>',
+                'room_id' => 22, // Salle d'examen 4
+                'maturity' => 4,
+            ],
+        ];
+
+        foreach ($bays as $index => $bay) {
+            \DB::table('bays')->insert(array_merge($bay, [
+                'id' => $index + 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
+            ]));
+        }
     }
 }
